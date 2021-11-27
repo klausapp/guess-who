@@ -30,6 +30,8 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { useHead } from '@vueuse/head'
+
 import Options from './components/Options.vue'
 import Instructions from './components/Instructions.vue'
 import Result from './components/Result.vue'
@@ -95,6 +97,20 @@ function endGame() {
   showResults.value = true
 }
 
+useHead({
+  title: 'Guess who!?',
+  meta: [
+    {
+      name: 'description',
+      content: `Guess the klausmoji`,
+    },
+    {
+      name: 'og:image',
+      content: `/preview.png`,
+    },
+  ],
+})
+
 prepRound()
 </script>
 
@@ -152,8 +168,8 @@ button:hover {
   align-items: center;
   justify-content: center;
 
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   padding: 0;
 }

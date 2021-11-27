@@ -188,6 +188,11 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.20.tgz#53746961f731a8ea666e3316271e944238dc31db"
   integrity sha512-FbpX+hD5BvXCQerEYO7jtAGHlhAkhTQ4KIV73kmLWNlawWhTiVuQxizgVb0BOkX5oG9cIRZ42EG++d/k/Efp0w==
 
+"@vueuse/head@^0.7.2":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@vueuse/head/-/head-0.7.2.tgz#594e857bd7161c6087e5d0934a7ee0f7c4276154"
+  integrity sha512-97RxYbIYwB9yFuRbdDbktsjKS0k12wYNksYV/UtYLOFNx+GAflK2kQ63b+sx09MJllEozD3GLeXV7O8rzMskeQ==
+
 acorn@^7.1.1:
   version "7.4.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
