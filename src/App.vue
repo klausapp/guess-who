@@ -107,11 +107,15 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: `Guess the klausmoji`,
+      content: 'Guess the klausmoji',
+    },
+    {
+      property: 'og:title',
+      content: 'Guess who!? by Klaus',
     },
     {
       property: 'og:image',
-      content: `/preview.png`,
+      content: 'https://guesswho.internal.klausapp.com/preview.png',
     },
   ],
 })
