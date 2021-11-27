@@ -18,6 +18,8 @@
       <line x1="12" y1="16" x2="12" y2="12"></line>
       <line x1="12" y1="8" x2="12.01" y2="8"></line>
     </svg>
+
+    <span class="instructions-label">instructions</span>
   </button>
 
   <p>
@@ -155,13 +157,14 @@ body {
 button {
   background: none;
   border: none;
-  padding: 8px 12px;
+  padding: 12px 16px;
   text-transform: uppercase;
   border-radius: 4px;
   cursor: pointer;
   font-weight: 500;
   justify-self: center;
   background-color: var(--brand-10);
+  color: var(--gray-80);
 }
 button:hover {
   background-color: var(--brand-50);
@@ -177,13 +180,31 @@ button:hover {
   align-items: center;
   justify-content: center;
 
-  width: 32px;
   height: 32px;
-  border-radius: 50%;
-  padding: 0;
+  border-radius: 14px;
+  padding: 0 12px;
+  color: var(--gray-70);
+  font-size: 12px;
 }
 .info-btn svg {
   height: 16px;
   width: 16px;
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 60rem) {
+  .instructions-label {
+    display: none;
+  }
+
+  .info-btn {
+    border-radius: 50%;
+    padding: 0;
+    width: 32px;
+  }
+
+  .info-btn svg {
+    margin: 0;
+  }
 }
 </style>
