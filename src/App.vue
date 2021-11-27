@@ -110,7 +110,7 @@ useHead({
       content: `Guess the klausmoji`,
     },
     {
-      name: 'og:image',
+      property: 'og:image',
       content: `/preview.png`,
     },
   ],
