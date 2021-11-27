@@ -1,12 +1,13 @@
 <template>
   <div class="wrapper overlay">
     <h1>Well-well...</h1>
+    <h2>You scored: {{ score }}</h2>
     <p>{{ message }}</p>
     <div>
       <button @click="restart">Play again!</button>
     </div>
 
-    <img :src="`/klausmojis/${image}`" />
+    <img :src="`/klausmojis/${image}`" :class="image === 'uniklaus.png' && 'shake'" />
   </div>
 </template>
 
@@ -42,5 +43,24 @@ img {
   width: 200px;
   height: auto;
   margin-top: 32px;
+}
+
+.shake {
+  animation: shake 0.2s infinite ease-in-out both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  20%,
+  60% {
+    transform: translate(-10px, -5px);
+  }
+
+  40%,
+  80% {
+    transform: translate(10px, 5px);
+  }
 }
 </style>

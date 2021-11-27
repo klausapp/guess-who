@@ -34,10 +34,9 @@ const unused = computed(() => {
 function pick(answer: string) {
   if (answer === correct.value) score.value++
   used.value.push(answer)
-  console.info('correct?', answer, correct.value, answer === correct.value)
   guessCount.value++
 
-  if (guessCount.value === GAME_LENGTH) showResults.value = true
+  if (guessCount.value > GAME_LENGTH) showResults.value = true
   else prepRound()
 }
 
@@ -50,8 +49,6 @@ function getRandom(list: string[]) {
 }
 
 function prepRound() {
-  // TODO: Pick 3 random samples from unused
-  // TODO: Pick one of those samples to be correct & look up its index from answers
   options.value = []
   const round = new Set<string>()
 
@@ -60,7 +57,6 @@ function prepRound() {
   options.value = [...round.values()]
   correct.value = getRandom(options.value)
   image.value = answers.findIndex((name) => name === correct.value) + 1
-  console.info('round prepped', correct.value)
 }
 
 function showIntro() {
