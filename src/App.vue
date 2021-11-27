@@ -20,7 +20,9 @@
     </svg>
   </button>
 
-  <p>Score: {{ score }}</p>
+  <p>
+    Score: <strong>{{ score }}</strong>
+  </p>
   <p>Guesses left: {{ GAME_LENGTH - guessCount + 1 }}</p>
 
   <Options :options="options" :image="image" @click="pick" />
@@ -92,7 +94,6 @@ function showIntro() {
 function closeIntro() {
   showInstructions.value = false
   localStorage.hideInstructions = true
-  prepRound()
 }
 
 function endGame() {
