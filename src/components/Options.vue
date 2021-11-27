@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <img :src="`/${image}.png`" />
+    <img :src="`/klausmojis/${image}.png`" />
 
     <div class="row">
       <button v-for="opt in options" type="button" :key="opt" @click="$emit('click', opt)">
@@ -46,9 +46,10 @@ button {
   cursor: pointer;
   font-weight: 500;
   justify-self: center;
+  background-color: var(--brand-10);
 }
 button:hover {
-  background-color: #475DE5;
+  background-color: var(--brand-50);
   color: white;
 }
 </style>
