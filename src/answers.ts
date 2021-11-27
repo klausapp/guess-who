@@ -17,7 +17,6 @@ export default [
   'marco',
   'dajana',
   'hendrik',
-  '', // TODO: Who dis? bicycle + spaghetti 🤔
   'markko',
   'diogo',
   'ann',
@@ -31,8 +30,11 @@ export default [
   'daniel',
   'fredi',
   'merily',
+  'kaire',
+  'egon',
+  'joonathan',
+  'kamil',
+  'kair',
   // TODO: pics too low-res
   // 'valentina', 'lisa', 'merit', 'martin',
-  // TODO: missing
-  // 'kaire', 'kamil', 'kair', 'joonathan', 'egon',
 ]

@@ -25,8 +25,9 @@ const emit = defineEmits(['click'])
 }
 
 img {
-  width: 100%;
+  width: 80%;
   height: auto;
+  margin-top: 32px;
 }
 
 .row {
@@ -35,21 +36,5 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
   margin-top: 32px;
-}
-
-button {
-  background: none;
-  border: none;
-  padding: 8px 12px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 500;
-  justify-self: center;
-  background-color: var(--brand-10);
-}
-button:hover {
-  background-color: var(--brand-50);
-  color: white;
 }
 </style>
