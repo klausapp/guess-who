@@ -2,6 +2,7 @@
   <img alt="Klaus" class="logo" src="./assets/logo.svg" @click="reload" />
   <p>Score: {{ score }}</p>
   <p>Guesses left: {{ GAME_LENGTH - guessCount + 1 }}</p>
+
   <Options :options="options" :image="image" @click="pick" />
   <Instructions v-show="showInstructions" @close="closeIntro" />
   <Result v-show="showResults" :score="score" />
@@ -20,7 +21,7 @@ const INSTRUCTIONS_DISMISSED = localStorage.hideInstructions
 const used = ref<string[]>([])
 const options = ref<string[]>([])
 const correct = ref<string>()
-const image = ref<number>()
+const image = ref<number>(0)
 const score = ref(0)
 const guessCount = ref(1)
 
@@ -56,7 +57,7 @@ function prepRound() {
 
   options.value = [...round.values()]
   correct.value = getRandom(options.value)
-  image.value = answers.findIndex((name) => name === correct.value) + 1
+  image.value = answers.findIndex((name) => name === correct.value) + 1 || 0
 }
 
 function showIntro() {
