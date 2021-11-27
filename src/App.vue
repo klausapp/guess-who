@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, ButtonHTMLAttributes } from 'vue'
 import { useHead } from '@vueuse/head'
 
 import Options from './components/Options.vue'
@@ -61,6 +61,7 @@ function pick(answer: string) {
 
   if (guessCount.value > GAME_LENGTH) showResults.value = true
   else prepRound()
+  ;(document.activeElement as any).blur()
 }
 
 function reload() {
