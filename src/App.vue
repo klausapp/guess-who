@@ -61,7 +61,8 @@ function pick(answer: string) {
 
   if (guessCount.value > GAME_LENGTH) showResults.value = true
   else prepRound()
-  ;(document.activeElement as any).blur()
+
+  if (document.activeElement instanceof HTMLElement) document.activeElement.blur()
 }
 
 function reload() {
@@ -118,6 +119,11 @@ prepRound()
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
 #app {
   font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu;
   -webkit-font-smoothing: antialiased;
@@ -125,8 +131,9 @@ prepRound()
   text-align: center;
   color: #2c3e50;
   max-width: 40rem;
-  width: 96vw;
-  margin: 60px auto;
+  width: 90vw;
+  margin: 0 auto;
+  padding-top: 60px;
 }
 
 .logo {
@@ -161,9 +168,9 @@ button:hover {
 }
 
 .info-btn {
-  position: absolute;
-  top: 32px;
-  left: 32px;
+  position: fixed;
+  top: 16px;
+  left: 16px;
 
   display: flex;
   align-items: center;
