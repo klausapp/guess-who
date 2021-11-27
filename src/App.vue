@@ -8,7 +8,6 @@
 import { ref, computed } from 'vue'
 import Options from './components/Options.vue'
 import answers from './answers'
-import 'https://raw.githubusercontent.com/klausapp/design-tokens/master/dist/colors.css'
 
 const used = ref<string[]>([])
 const options = ref<string[]>([])
@@ -31,7 +30,7 @@ function reload() {
   location.reload()
 }
 
-function getRandom (list = answers) {
+function getRandom (list: string[]) {
   return list[list.length * Math.random() | 0]
 }
 
@@ -41,14 +40,11 @@ function prepRound() {
   options.value = []
   const round = new Set<string>()
 
-  while (round.size < 3) {
-    round.add(getRandom())
-  }
+  while (round.size < 3) round.add(getRandom(unused.value))
 
-  console.info('round', round.values())
   options.value = [...round.values()]
   correct.value = getRandom(options.value)
-  image.value = answers.findIndex((name) => name === correct.value)
+  image.value = answers.findIndex((name) => name === correct.value) + 1
   console.info('round prepped', correct.value)
 }
 
@@ -60,6 +56,8 @@ prepRound()
 </script>
 
 <style>
+@import url('https://raw.githubusercontent.com/klausapp/design-tokens/master/dist/colors.css');
+
 #app {
   font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu;
   -webkit-font-smoothing: antialiased;

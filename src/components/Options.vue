@@ -1,12 +1,12 @@
 <template>
   <div class="wrapper">
-    <img :src="`/klausmojis/${image}.png`" />
-
     <div class="row">
       <button v-for="opt in options" type="button" :key="opt" @click="$emit('click', opt)">
         {{ opt }}
       </button>
     </div>
+
+    <img :src="`/klausmojis/${image}.png`" />
   </div>
 </template>
 
