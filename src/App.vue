@@ -166,9 +166,11 @@ button {
   background-color: var(--brand-10);
   color: var(--gray-80);
 }
-button:hover {
-  background-color: var(--brand-50);
-  color: white;
+@media (hover: hover) and (pointer: fine) {
+  button:hover {
+    background-color: var(--brand-50);
+    color: white;
+  }
 }
 
 .info-btn {
