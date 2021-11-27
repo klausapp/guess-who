@@ -34,7 +34,6 @@
 
 <script setup lang="ts">
 import { ref, computed, ButtonHTMLAttributes } from 'vue'
-import { useHead } from '@vueuse/head'
 
 import Options from './components/Options.vue'
 import Instructions from './components/Instructions.vue'
@@ -101,24 +100,6 @@ function closeIntro() {
 function endGame() {
   showResults.value = true
 }
-
-useHead({
-  title: 'Guess who!?',
-  meta: [
-    {
-      name: 'description',
-      content: 'Guess the klausmoji',
-    },
-    {
-      property: 'og:title',
-      content: 'Guess who!? by Klaus',
-    },
-    {
-      property: 'og:image',
-      content: 'https://guesswho.internal.klausapp.com/preview.png',
-    },
-  ],
-})
 
 prepRound()
 </script>

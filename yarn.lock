@@ -188,11 +188,6 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.20.tgz#53746961f731a8ea666e3316271e944238dc31db"
   integrity sha512-FbpX+hD5BvXCQerEYO7jtAGHlhAkhTQ4KIV73kmLWNlawWhTiVuQxizgVb0BOkX5oG9cIRZ42EG++d/k/Efp0w==
 
-"@vueuse/head@^0.7.2":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@vueuse/head/-/head-0.7.2.tgz#594e857bd7161c6087e5d0934a7ee0f7c4276154"
-  integrity sha512-97RxYbIYwB9yFuRbdDbktsjKS0k12wYNksYV/UtYLOFNx+GAflK2kQ63b+sx09MJllEozD3GLeXV7O8rzMskeQ==
-
 acorn@^7.1.1:
   version "7.4.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
@@ -711,6 +706,11 @@ upath@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/upath/-/upath-2.0.1.tgz#50c73dea68d6f6b990f51d279ce6081665d61a8b"
   integrity sha512-1uEe95xksV1O0CYKXo8vQvN1JEbtJp7lb7C5U9HMsIp6IVwntkH/oNUzyVNQSd4S1sYk2FpSSW44FqMc8qee5w==
+
+vite-plugin-html-config@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/vite-plugin-html-config/-/vite-plugin-html-config-1.0.8.tgz#7217424afe05deaacec309a77a6631532e7fa6d4"
+  integrity sha512-3tTtBQO+6zpC8uzAAfj3FWygj+V6H6F9fEt5KtB3j5UHsRYP0yLpTHsMvubXtqCXbKDp1oOakYYSjprqYcbrpA==
 
 vite@^2.6.4:
   version "2.6.7"
