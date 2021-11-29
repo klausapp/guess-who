@@ -4,14 +4,18 @@
 
     <h1>👋 Meowdy!</h1>
     <p>How well do you know your colleagues?</p>
-    <p>But how well do you know their feline spirit avatars — ✨ <em>klausmojis</em> ✨ ?</p>
-    <p>I'll give you 10 guesses, let's see what you score!</p>
+    <p>...But how well do you know their feline spirit avatars — ✨ <em>klausmojis</em> ✨ ?</p>
+    <p>
+      I'll give you <strong>{{ count }}</strong> guesses, let's see what you score!
+    </p>
+    <p>You'll only have <strong>3 seconds</strong> for each of the last <strong>5</strong> guesses!</p>
 
     <button @click="emit('close')">Play!</button>
   </div>
 </template>
 
 <script setup lang="ts">
+defineProps<{ count: number }>()
 const emit = defineEmits(['close'])
 </script>
 

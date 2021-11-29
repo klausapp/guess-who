@@ -27,8 +27,8 @@
   </p>
   <p>Guesses left: {{ GAME_LENGTH - guessCount + 1 }}</p>
 
-  <Options :options="options" :image="image" @click="pick" />
-  <Instructions v-show="showInstructions" @close="closeIntro" />
+  <Options :options="options" :image="image" :with-timer="guessCount > 10" @click="pick" />
+  <Instructions v-show="showInstructions" :count="GAME_LENGTH" @close="closeIntro" />
   <Result v-show="showResults" :score="score" />
 </template>
 
@@ -40,7 +40,7 @@ import Instructions from './components/Instructions.vue'
 import Result from './components/Result.vue'
 import answers from './answers'
 
-const GAME_LENGTH = 10
+const GAME_LENGTH = 15
 const INSTRUCTIONS_DISMISSED = localStorage.hideInstructions
 
 const used = ref<string[]>([])

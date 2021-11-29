@@ -16,17 +16,18 @@ import { computed } from 'vue'
 const props = defineProps<{ score: number }>()
 
 const message = computed(() => {
-  if (props.score < 5) return 'Oof... best to just go again and not mention this to anyone'
-  if (props.score < 8) return 'Pretty good, but we know you have more in you!'
-  if (props.score < 10) return 'Wow! Almost perfect!'
-  return 'I yield... and crown you queen/king of Klausmojis!'
+  if (props.score === 15) return 'I yield... and crown you queen/king of Klausmojis!'
+  if (props.score > 12) return 'Wow! Almost perfect!'
+  if (props.score > 10) return 'Pretty good, but we know you have more in you!'
+  if (props.score > 8) return `If you spend a couple more hours on this, you'll really get somewhere`
+  return 'Oof... best to just go again and not mention this to anyone'
 })
 
 const image = computed(() => {
-  if (props.score < 5) return 'facepaw.gif'
-  if (props.score < 8) return 'stars.gif'
-  if (props.score < 10) return 'hearts.gif'
-  return 'uniklaus.png'
+  if (props.score === 15) return 'uniklaus.png'
+  if (props.score > 12) return 'hearts.gif'
+  if (props.score > 8) return 'stars.gif'
+  return 'facepaw.gif'
 })
 
 function restart() {
@@ -36,7 +37,7 @@ function restart() {
 
 <style scoped>
 .wrapper {
-  margin-top: 32px;
+  padding-top: 32px;
 }
 
 img {
