@@ -14,8 +14,8 @@
 import { watch, Ref, ref } from 'vue'
 
 const props = defineProps<{
-  image: Ref<number>
-  options: Ref<string[]>
+  image: number
+  options: string[]
   withTimer: boolean
 }>()
 

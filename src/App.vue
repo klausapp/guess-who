@@ -46,7 +46,7 @@ const INSTRUCTIONS_DISMISSED = localStorage.hideInstructions
 const used = ref<string[]>([])
 const options = ref<string[]>([])
 const correct = ref<string>()
-const image = ref<number>(0)
+const image = ref(0)
 const score = ref(0)
 const guessCount = ref(1)
 
