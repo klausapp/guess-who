@@ -507,9 +507,9 @@ magic-string@^0.25.7:
     sourcemap-codec "^1.4.4"
 
 nanoid@^3.1.28:
-  version "3.1.29"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.29.tgz#214fb2d7a33e1a5bef4757b779dfaeb6a4e5aeb4"
-  integrity sha512-dW2pUSGZ8ZnCFIlBIA31SV8huOGCHb6OwzVCc7A69rb/a+SgPBwfmLvK5TKQ3INPbRkcI8a/Owo0XbiTNH19wg==
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.2.0.tgz#62667522da6673971cca916a6d3eff3f415ff80c"
+  integrity sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA==
 
 object-assign@^4.1.1:
   version "4.1.1"
@@ -706,11 +706,6 @@ upath@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/upath/-/upath-2.0.1.tgz#50c73dea68d6f6b990f51d279ce6081665d61a8b"
   integrity sha512-1uEe95xksV1O0CYKXo8vQvN1JEbtJp7lb7C5U9HMsIp6IVwntkH/oNUzyVNQSd4S1sYk2FpSSW44FqMc8qee5w==
-
-vite-plugin-html-config@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/vite-plugin-html-config/-/vite-plugin-html-config-1.0.8.tgz#7217424afe05deaacec309a77a6631532e7fa6d4"
-  integrity sha512-3tTtBQO+6zpC8uzAAfj3FWygj+V6H6F9fEt5KtB3j5UHsRYP0yLpTHsMvubXtqCXbKDp1oOakYYSjprqYcbrpA==
 
 vite@^2.6.4:
   version "2.6.7"
